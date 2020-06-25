@@ -1,0 +1,232 @@
+html {
+    font-family: 'Merriweather', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.menu-main {
+    list-style: none;
+    margin: 0;
+    padding: 25px 0 5px;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+.menu-main li {
+    text-align: right;
+}
+
+.menu-main li:after {
+    content: "|";
+    color: #0026ff;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.menu-main a,
+.menu-main a:visited {
+    color: #1e0a8b;
+}
+
+.menu-main a:hover {
+    color: #c00000;
+}
+
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background:  #c00000;
+    transition: .8s;
+}
+
+.menu-main a:hover:before,
+.menu-main :before {
+    left: 0;
+}
+
+.menu-main a:hover:after,
+.menu-main :after {
+    right: 0;
+}
+
+@media (max-width: 550px) {
+    .menu-main {
+        padding-top: 0;
+    }
+
+    .menu-main li {
+        display: block;
+    }
+
+    .menu-main li:after {
+        content: none;
+    }
+
+    .menu-main a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
+
+body {
+    text-align: center;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 99.8vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, rgb(248, 255, 143) 0%, rgb(247, 233, 39) 100%);
+    border-top: 1px solid red;
+    font-size: 40px;
+}
+
+#options {
+    font-style: italic;
+    font-size: 30px;
+}
+
+#proj {
+    font-size: 36px;
+    padding-bottom: 50px;
+    padding-top: 80px;
+}
+
+.project-tile {
+    display: grid;
+    grid-template-rows: 5fr 5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    padding-bottom: 50px;
+}
+
+#projects {
+    background-color: rgb(152, 218, 230);
+    background-image: linear-gradient(60deg, rgb(135, 248, 248) 0%, rgb(83, 184, 231) 100%);
+    border-top: 1px solid red;
+    padding-bottom: 30px;
+}
+
+#projects img {
+    border: 3px solid #00a8e1;
+}
+
+.endpoint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, rgb(156, 255, 153) 0%, rgb(101, 226, 84) 100%);
+    border-top: 1px solid red;
+}
+.endpoint h2 {
+    font-size: 50px;
+}
+
+.endpoint #text_once {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.endpoint p {
+    font-size: 22px;
+}
+
+#bye_text {
+    text-align: right;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    height: 5vh;
+    border-top: 1px solid red;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+.profile_link_main {
+    display: flex;
+    font-size: 50px;
+    margin: 0 -15px;
+    padding-top: 35px;
+}
+
+.profile_link_main p {
+    flex: 1 1 auto;
+    margin: 0 15px;
+}
+
+.profile_link_main a {
+    color: #000;
+}
+
+a.button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+} 
+a.button:hover { 
+    background: linear-gradient(#f5ae00, #f59500) #f5ae00; 
+}
+a.button:active { 
+    background: linear-gradient(#f59500, #f5ae00) #f59500; 
+}
